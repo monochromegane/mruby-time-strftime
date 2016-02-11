@@ -35,6 +35,8 @@ class Time
         ( f == 'd' ? '%02d' : '%2d' ) % day
       when 'F'
         '%Y-%m-%d'
+      when 'H', 'k'
+        ( f == 'H' ? '%02d' : '%2d' ) % hour
       else
         ''
       end
