@@ -46,6 +46,8 @@ class Time
         '%03d' % yday
       when 'L'
         '%03d' % ( usec / 1000 )
+      when 'M'
+        '%02d' % min
       else
         ''
       end

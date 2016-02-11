@@ -26,7 +26,7 @@ end
 assert("Time#strftime with %c") do
   time = Time.new(2016, 1, 2, 3, 4, 5)
 
-  assert_equal('Sat Jan  2 03:: ', time.strftime('%c'))
+  assert_equal('Sat Jan  2 03:04: ', time.strftime('%c'))
 end
 
 assert("Time#strftime with %D") do
@@ -79,7 +79,13 @@ assert("Time#strftime with %j") do
 end
 
 assert("Time#strftime with %L") do
-  time = Time.new(2016, 1, 2, 3, 4, 5, 6)
+  time = Time.new(2016, 1, 2, 3, 4, 5)
 
   assert_equal('000', time.strftime('%L'))
+end
+
+assert("Time#strftime with %M") do
+  time = Time.new(2016, 1, 2, 3, 4, 5)
+
+  assert_equal('04', time.strftime('%M'))
 end
