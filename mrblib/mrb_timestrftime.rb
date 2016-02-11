@@ -56,6 +56,8 @@ class Time
         f == 'P' ? ampm : ampm.downcase
       when 'R'
         '%H:%M'
+      when 'r'
+        '%I:%M:%S %p'
       else
         ''
       end
