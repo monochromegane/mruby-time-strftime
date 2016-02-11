@@ -182,3 +182,9 @@ assert("Time#strftime with %y") do
 
   assert_equal('16', time.strftime('%y'))
 end
+
+assert("Time#strftime with %Z") do
+  time = Time.new(2016, 1, 2)
+
+  assert_equal('LOCAL', time.strftime('%Z'))
+end

@@ -76,6 +76,8 @@ class Time
         '%04d' % year
       when 'y'
         '%02d' % ( year % 100 )
+      when 'Z'
+        zone
       else
         ''
       end
