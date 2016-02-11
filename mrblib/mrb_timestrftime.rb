@@ -44,6 +44,8 @@ class Time
         ( f == 'I' ? '%02d' : '%2d' ) % v
       when 'j'
         '%03d' % yday
+      when 'L'
+        '%03d' % ( usec / 1000 )
       else
         ''
       end

@@ -77,3 +77,9 @@ assert("Time#strftime with %j") do
 
   assert_equal('002', time.strftime('%j'))
 end
+
+assert("Time#strftime with %L") do
+  time = Time.new(2016, 1, 2, 3, 4, 5, 6)
+
+  assert_equal('000', time.strftime('%L'))
+end
