@@ -70,6 +70,8 @@ class Time
         '%e-%b-%Y'
       when 'w'
         '%1d' % wday
+      when 'x'
+        '%m/%d/%y'
       else
         ''
       end
