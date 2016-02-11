@@ -42,6 +42,8 @@ class Time
         v = 12  if v == 0
         v -= 12 if v > 12
         ( f == 'I' ? '%02d' : '%2d' ) % v
+      when 'j'
+        '%03d' % yday
       else
         ''
       end
