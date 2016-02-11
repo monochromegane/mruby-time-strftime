@@ -28,3 +28,9 @@ assert("Time#strftime with %c") do
 
   assert_equal('Fri Jan  :: ', time.strftime('%c'))
 end
+
+assert("Time#strftime with %D") do
+  time = Time.new(2016, 1, 1)
+
+  assert_equal('//', time.strftime('%D'))
+end

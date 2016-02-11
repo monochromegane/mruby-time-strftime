@@ -29,6 +29,8 @@ class Time
         '%02d' % (year/100).to_i
       when 'c'
         '%a %b %e %H:%M:%S %Y'
+      when 'D'
+        '%m/%d/%y'
       else
         ''
       end
