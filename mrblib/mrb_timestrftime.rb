@@ -25,6 +25,8 @@ class Time
       when 'B', 'b', 'h'
         m = MONTHS[month-1]
         f == 'B' ? m : m[0..2]
+      when 'C'
+        '%02d' % (year/100).to_i
       else
         ''
       end
