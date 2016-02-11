@@ -2,6 +2,7 @@ class Time
   module StringFormatable
 
     DAYS   = %w(Sunday Monday Tuesday Wednesday Thursday Friday Saturday)
+    MONTHS = %w(January February March April May June July August September October November December)
 
     def strftime(format)
       format = format.dup
@@ -20,7 +21,10 @@ class Time
       case f
       when 'A', 'a'
         a = DAYS[wday]
-        f == 'a' ? a[0..2] : a
+        f == 'A' ? a : a[0..2]
+      when 'B', 'b', 'h'
+        m = MONTHS[month-1]
+        f == 'B' ? m : m[0..2]
       else
         ''
       end
