@@ -54,3 +54,20 @@ assert("Time#strftime with %H and %k") do
   assert_equal('03', time.strftime('%H'))
   assert_equal(' 3', time.strftime('%k'))
 end
+
+assert("Time#strftime with %I and %l") do
+  time = Time.new(2016, 1, 2, 3)
+
+  assert_equal('03', time.strftime('%I'))
+  assert_equal(' 3', time.strftime('%l'))
+
+  time = Time.new(2016, 1, 2, 0)
+
+  assert_equal('12', time.strftime('%I'))
+  assert_equal('12', time.strftime('%l'))
+
+  time = Time.new(2016, 1, 2, 15)
+
+  assert_equal('03', time.strftime('%I'))
+  assert_equal(' 3', time.strftime('%l'))
+end

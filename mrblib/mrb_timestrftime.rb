@@ -37,6 +37,11 @@ class Time
         '%Y-%m-%d'
       when 'H', 'k'
         ( f == 'H' ? '%02d' : '%2d' ) % hour
+      when 'I', 'l'
+        v = hour
+        v = 12  if v == 0
+        v -= 12 if v > 12
+        ( f == 'I' ? '%02d' : '%2d' ) % v
       else
         ''
       end
