@@ -72,6 +72,8 @@ class Time
         '%1d' % wday
       when 'x'
         '%m/%d/%y'
+      when 'Y'
+        '%04d' % year
       else
         ''
       end
