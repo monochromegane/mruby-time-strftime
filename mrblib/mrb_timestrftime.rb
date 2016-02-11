@@ -58,6 +58,8 @@ class Time
         '%H:%M'
       when 'r'
         '%I:%M:%S %p'
+      when 'S'
+        '%02d' % sec
       else
         ''
       end
