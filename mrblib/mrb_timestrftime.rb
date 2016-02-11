@@ -74,6 +74,8 @@ class Time
         '%m/%d/%y'
       when 'Y'
         '%04d' % year
+      when 'y'
+        '%02d' % ( year % 100 )
       else
         ''
       end
