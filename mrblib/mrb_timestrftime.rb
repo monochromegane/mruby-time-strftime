@@ -68,6 +68,8 @@ class Time
         '%1d' % ( sunday? ? 7 : wday )
       when 'v'
         '%e-%b-%Y'
+      when 'w'
+        '%1d' % wday
       else
         ''
       end
