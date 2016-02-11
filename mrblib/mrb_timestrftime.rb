@@ -30,7 +30,7 @@ class Time
         '%02d' % (year/100).to_i
       when 'c'
         '%a %b %e %H:%M:%S %Y'
-      when 'D'
+      when 'D', 'x'
         '%m/%d/%y'
       when 'd', 'e'
         ( f == 'd' ? '%02d' : '%2d' ) % day
@@ -70,8 +70,6 @@ class Time
         '%e-%b-%Y'
       when 'w'
         '%1d' % wday
-      when 'x'
-        '%m/%d/%y'
       when 'Y'
         '%04d' % year
       when 'y'
