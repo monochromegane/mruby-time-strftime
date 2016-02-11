@@ -62,6 +62,8 @@ class Time
         '%02d' % sec
       when 's'
         '%1d' % to_i
+      when 'T'
+        '%H:%M:%S'
       else
         ''
       end

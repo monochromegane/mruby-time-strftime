@@ -131,3 +131,9 @@ assert("Time#strftime with %s") do
 
   assert_equal('1451671445', time.strftime('%s'))
 end
+
+assert("Time#strftime with %T") do
+  time = Time.new(2016, 1, 2, 3, 4, 5)
+
+  assert_equal('03:04:05', time.strftime('%T'))
+end
