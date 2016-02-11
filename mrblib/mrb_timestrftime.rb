@@ -53,7 +53,7 @@ class Time
         '%02d' % month
       when 'P', 'p'
         ampm = hour < 12 ? AMPM[0] : AMPM[1]
-        f == 'P' ? ampm : ampm.downcase
+        f == 'p' ? ampm : ampm.downcase
       when 'R'
         '%H:%M'
       when 'r'

@@ -99,13 +99,13 @@ end
 assert("Time#strftime with %P and %p") do
   time = Time.new(2016, 1, 2, 3)
 
-  assert_equal('AM', time.strftime('%P'))
-  assert_equal('am', time.strftime('%p'))
+  assert_equal('am', time.strftime('%P'))
+  assert_equal('AM', time.strftime('%p'))
 
   time = Time.new(2016, 1, 2, 15)
 
-  assert_equal('PM', time.strftime('%P'))
-  assert_equal('pm', time.strftime('%p'))
+  assert_equal('pm', time.strftime('%P'))
+  assert_equal('PM', time.strftime('%p'))
 end
 
 assert("Time#strftime with %R") do
@@ -117,7 +117,7 @@ end
 assert("Time#strftime with %r") do
   time = Time.new(2016, 1, 2, 3, 4, 5)
 
-  assert_equal('03:04:05 am', time.strftime('%r'))
+  assert_equal('03:04:05 AM', time.strftime('%r'))
 end
 
 assert("Time#strftime with %S") do
