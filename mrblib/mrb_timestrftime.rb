@@ -27,6 +27,8 @@ class Time
         f == 'B' ? m : m[0..2]
       when 'C'
         '%02d' % (year/100).to_i
+      when 'c'
+        '%a %b %e %H:%M:%S %Y'
       else
         ''
       end
