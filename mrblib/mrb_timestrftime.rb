@@ -1,0 +1,2 @@
+class TimeStrftime
+end
