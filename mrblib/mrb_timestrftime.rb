@@ -54,6 +54,8 @@ class Time
       when 'P', 'p'
         ampm = hour < 12 ? AMPM[0] : AMPM[1]
         f == 'P' ? ampm : ampm.downcase
+      when 'R'
+        '%H:%M'
       else
         ''
       end
