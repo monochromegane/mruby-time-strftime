@@ -64,6 +64,8 @@ class Time
         '%1d' % to_i
       when 'T'
         '%H:%M:%S'
+      when 'u'
+        '%1d' % ( sunday? ? 7 : wday )
       else
         ''
       end
