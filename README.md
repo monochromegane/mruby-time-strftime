@@ -1,6 +1,6 @@
 # mruby-time-strftime   [![Build Status](https://travis-ci.org/monochromegane/mruby-time-strftime.svg?branch=master)](https://travis-ci.org/monochromegane/mruby-time-strftime)
 
-Time#strftime
+Time#strftime for mruby.
 
 ## example
 
