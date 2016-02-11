@@ -48,6 +48,8 @@ class Time
         '%03d' % ( usec / 1000 )
       when 'M'
         '%02d' % min
+      when 'm'
+        '%02d' % month
       else
         ''
       end

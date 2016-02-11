@@ -32,7 +32,7 @@ end
 assert("Time#strftime with %D") do
   time = Time.new(2016, 1, 2)
 
-  assert_equal('/02/', time.strftime('%D'))
+  assert_equal('01/02/', time.strftime('%D'))
 end
 
 assert("Time#strftime with %d and %e") do
@@ -45,7 +45,7 @@ end
 assert("Time#strftime with %F") do
   time = Time.new(2016, 1, 2)
 
-  assert_equal('--02', time.strftime('%F'))
+  assert_equal('-01-02', time.strftime('%F'))
 end
 
 assert("Time#strftime with %H and %k") do
@@ -88,4 +88,10 @@ assert("Time#strftime with %M") do
   time = Time.new(2016, 1, 2, 3, 4, 5)
 
   assert_equal('04', time.strftime('%M'))
+end
+
+assert("Time#strftime with %m") do
+  time = Time.new(2016, 1, 2, 3, 4, 5)
+
+  assert_equal('01', time.strftime('%m'))
 end
