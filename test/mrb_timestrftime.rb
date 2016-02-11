@@ -147,3 +147,9 @@ assert("Time#strftime with %u") do
 
   assert_equal('7', time.strftime('%u'))
 end
+
+assert("Time#strftime with %v") do
+  time = Time.new(2016, 1, 2)
+
+  assert_equal(' 2-Jan-', time.strftime('%v'))
+end
