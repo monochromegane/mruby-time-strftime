@@ -1,6 +1,7 @@
 class Time
   module StringFormatable
 
+    AMPM   = %w(AM PM)
     DAYS   = %w(Sunday Monday Tuesday Wednesday Thursday Friday Saturday)
     MONTHS = %w(January February March April May June July August September October November December)
 
@@ -50,6 +51,9 @@ class Time
         '%02d' % min
       when 'm'
         '%02d' % month
+      when 'P', 'p'
+        ampm = hour < 12 ? AMPM[0] : AMPM[1]
+        f == 'P' ? ampm : ampm.downcase
       else
         ''
       end

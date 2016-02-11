@@ -95,3 +95,15 @@ assert("Time#strftime with %m") do
 
   assert_equal('01', time.strftime('%m'))
 end
+
+assert("Time#strftime with %P and %p") do
+  time = Time.new(2016, 1, 2, 3)
+
+  assert_equal('AM', time.strftime('%P'))
+  assert_equal('am', time.strftime('%p'))
+
+  time = Time.new(2016, 1, 2, 15)
+
+  assert_equal('PM', time.strftime('%P'))
+  assert_equal('pm', time.strftime('%p'))
+end
