@@ -26,11 +26,18 @@ end
 assert("Time#strftime with %c") do
   time = Time.new(2016, 1, 1, 1, 1, 1)
 
-  assert_equal('Fri Jan  :: ', time.strftime('%c'))
+  assert_equal('Fri Jan  1 :: ', time.strftime('%c'))
 end
 
 assert("Time#strftime with %D") do
   time = Time.new(2016, 1, 1)
 
-  assert_equal('//', time.strftime('%D'))
+  assert_equal('/01/', time.strftime('%D'))
+end
+
+assert("Time#strftime with %d and %e") do
+  time = Time.new(2016, 1, 1)
+
+  assert_equal('01', time.strftime('%d'))
+  assert_equal(' 1', time.strftime('%e'))
 end

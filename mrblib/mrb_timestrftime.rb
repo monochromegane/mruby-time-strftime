@@ -31,6 +31,8 @@ class Time
         '%a %b %e %H:%M:%S %Y'
       when 'D'
         '%m/%d/%y'
+      when 'd', 'e'
+        ( f == 'd' ? '%02d' : '%2d' ) % day
       else
         ''
       end
