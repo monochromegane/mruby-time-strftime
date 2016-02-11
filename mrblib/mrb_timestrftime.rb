@@ -33,6 +33,8 @@ class Time
         '%m/%d/%y'
       when 'd', 'e'
         ( f == 'd' ? '%02d' : '%2d' ) % day
+      when 'F'
+        '%Y-%m-%d'
       else
         ''
       end

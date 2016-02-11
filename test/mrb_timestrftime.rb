@@ -41,3 +41,9 @@ assert("Time#strftime with %d and %e") do
   assert_equal('01', time.strftime('%d'))
   assert_equal(' 1', time.strftime('%e'))
 end
+
+assert("Time#strftime with %F") do
+  time = Time.new(2016, 1, 1)
+
+  assert_equal('--01', time.strftime('%F'))
+end
