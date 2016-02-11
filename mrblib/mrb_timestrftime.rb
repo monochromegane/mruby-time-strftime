@@ -62,7 +62,7 @@ class Time
         '%02d' % sec
       when 's'
         '%1d' % to_i
-      when 'T'
+      when 'T', 'X'
         '%H:%M:%S'
       when 'u'
         '%1d' % ( sunday? ? 7 : wday )
