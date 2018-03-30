@@ -1,5 +1,5 @@
 class Time
-  module StringFormatable
+  module StringFormattable
 
     AMPM   = %w(AM PM)
     DAYS   = %w(Sunday Monday Tuesday Wednesday Thursday Friday Saturday)
@@ -86,5 +86,5 @@ class Time
 end
 
 class Time
-  include StringFormatable
+  include StringFormattable
 end
